@@ -1,0 +1,55 @@
+/* base.css */
+
+/* Basic CSS Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-family: sans-serif; /* A sensible default font */
+    color: #333;
+    background-color: #f8f8f8;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Base styles for list items (often used in nav/footer) */
+ul {
+    list-style: none;
+}
+
+/* Styles for the "works_on_smartphone" class - from the assignment hint */
+/* This is a simple example; your provided base.css might have more sophisticated media queries. */
+@media screen and (max-width: 768px) {
+    .works_on_smartphone main {
+        flex-direction: column; /* Stack article and aside on small screens */
+    }
+    .works_on_smartphone article,
+    .works_on_smartphone aside {
+        flex: 1 1 auto; /* Make them take full width */
+        width: 100%;
+    }
+}
+
+/* Example style for the logo class, as mentioned in the assignment */
+.logo {
+    font-size: 1.8em; /* Slightly larger for visual prominence */
+    font-weight: bold;
+    color: #007bff; /* A distinct color for the logo */
+    /* Add any other specific logo styles here */
+}
+
+/* You would add more general, foundational styles here */
